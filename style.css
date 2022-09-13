@@ -24,18 +24,13 @@ nav {
 .links {
     column-gap: 30px;
 }
-
-.links img {
-    margin-bottom: 8px;
-}
-
 .nav-links {
     display: flex;
     list-style-type: none;
     column-gap: 20px;
 
 }
-.nav-links li::after {
+.nav-links li:active::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -46,30 +41,17 @@ nav {
     margin-top: 15%;
 }
 
-.nav-links li:hover::after {
-   
+.nav-links li:active::after {
     width: 115%;
 }
 
-/* .nav-item.active:hover{
-    border-bottom: 4px solid #005BD4;
-
-} */
-/* .nav-item.active:hover::after {
-    content: "doyin";
-    display: block;
-    height: 10px;
-    width: 10px;
-    position: absolute;
-    color: #005BD4;
-    bottom: 0px;
-} */
 .nav-item {
     position: relative;
 }
 
 .nav-item,
 .mobilenav-item {
+    cursor: pointer;
     padding: 5px;
 }
 
@@ -239,7 +221,6 @@ form {
     bottom: 0px;
     right: 15px;
 }
-
 .overview-section {
     padding: 4rem 12rem;
     position: relative;
@@ -255,9 +236,75 @@ form {
     position: absolute;
     bottom: 70px;
     left: 500px;
-
+}
+.vector-three{
+    position: absolute;
+    left: 60px;
+    top: 340px;
+}
+.vector-four{
+    position: absolute;
+    left: 70px;
+    top: 350px;
+}
+.vector-five{
+    position: absolute;
+    top: 40px;
+    left: 120px;
+}
+.vector-six{
+    position: absolute;
+    top: 120px;
+    left: 75px;
+}
+.vector-seven{
+    position: absolute;
+    top: 40px;
+    left: 40px;
 }
 
+.vector-ten{
+    position: absolute;
+    right: 30px;
+    top: 250px;
+}
+.vector-eleven{
+    position: absolute;
+    right: 40px;
+    top: 80px;
+}
+.vector-eight{
+    position: absolute;
+    top: 45px;
+    right: 420px;
+}
+
+.vector-nine{
+    position: absolute;
+    top: 45px;
+    right: 280px;
+}
+.vector-twelve{
+    position: absolute;
+    top: 40px;
+    left: 290px;
+}
+.vector-thirteen{
+    position: absolute;
+    bottom: 90px;
+    left: 330px;
+}
+
+.vector-fourteen{
+    position: absolute;
+    bottom: 100px;
+    right: 420px;
+}
+.green-vector{
+    position: absolute;
+    top: 85px;
+    right: 350px;
+}
 .overview-heading {
     font-family: 'Jost', sans-serif;
     text-align: center;
@@ -563,7 +610,7 @@ form input {
 .footer-heading {
     font-weight: 700;
     font-size: 15px;
-    line-height: 32px;
+    line-height: 45px;
     color: #202224;
 }
 
@@ -617,6 +664,13 @@ form input {
 
 @media screen and (max-width:1024px) {
     .menu {
+        display: none;
+    }
+    .vector-one, .vector-two, .vector-three, 
+    .vector-four, .vector-five,.vector-six,
+    .vector-seven, .vector-eight, .vector-nine,
+    .vector-ten, .vector-eleven, .vector-twelve,
+    .vector-thirteen, .vector-fourteen{
         display: none;
     }
 
@@ -957,6 +1011,13 @@ form input {
 
     .card-info {
         padding: 0px 1.2rem;
+    }
+    .overview-section {
+        padding: 1rem 0.5rem;
+    }
+    .description {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
     }
 
     .top {
