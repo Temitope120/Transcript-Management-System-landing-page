@@ -18,12 +18,12 @@
 <body>
     <nav class="bg-white">
         <div>
-            <img src="images/cert-logo.svg" alt="">
+            <img src="images/cert-logo.svg" alt="" class="logo">
         </div>
         <div class="links flex cursor-pointer">
             <ul class="nav-links">
                 <li class="nav-item">
-                    <a> Home</a>
+                    <a class="active"> Home</a>
                 </li>
                 <li class="nav-item">
                     <a> About Us</a>
@@ -36,7 +36,25 @@
             <img src="images/search-img.svg" alt="" class="cursor-pointer">
         </div>
 
+        <!-- mobile links -->
+        <div class="mobile-links cursor-pointer mobile-div" id="mobileDiv" >
+            <ul class="nav-mobile-links" id="mobile">
+                <li class="mobilenav-item">
+                    <a> Home</a>
+                </li>
+                <li class="mobilenav-item">
+                    <a> About Us</a>
+                </li>
+                <li class="mobilenav-item">
+                    <a> FAQ</a>
+                </li>
+            </ul>
+
+            <img src="images/search-img.svg" alt="" class="cursor-pointer">
+        </div>
+
         <div class="flex gap-sm">
+            <img src="images/menu-icon-transcriptt.png" alt="" class="menu" onclick="toggleMenu()">
             <p class="cursor-pointer nav-item">Create Account</p>
             <button class="blue-btn cursor-pointer">Login &nbsp;<img src="images/right-arow.svg" alt=""></button>
         </div>
@@ -85,7 +103,7 @@
                     <img src="images/wallet-icon.svg" alt="">
                 </div>
             </div>
-    
+
             <div class="step-counter">
                 <div class="flex-between">
                     <span class="count">
@@ -94,7 +112,7 @@
                     &nbsp;
                     <img src="images/line-img.svg" alt="" class="line-img">
                 </div>
-    
+
                 <div class="flex-between">
                     <span class="count">
                         2
@@ -102,7 +120,7 @@
                     &nbsp;
                     <img src="images/line-img.svg" alt="" class="line-img">
                 </div>
-    
+
                 <span class="count">
                     3
                 </span>
@@ -155,12 +173,14 @@
                         <p class="card-header">Individual</p>
                         <p class="card-text">
                             CertTransX offers convenient online services for students. You can request <span
-                                class="moreText" id="one">for your transcripts, obtain verification from your university and
-                                order your physical certificate and have it delivered to you. 
+                                class="moreText" id="one">for your transcripts, obtain verification from your university
+                                and
+                                order your physical certificate and have it delivered to you.
                             </span>
                         </p>
-                        <button class="learn-more-btn cursor-pointer" id="learn-more-one" onClick = "showMore('individual')">Learn More &nbsp; <img
-                                src="images/right-arrow-blue.svg" alt=""></button>
+                        <button class="learn-more-btn cursor-pointer" id="learn-more-one"
+                            onClick="showMore('individual')">Learn More &nbsp; <img src="images/right-arrow-blue.svg"
+                                alt=""></button>
                     </div>
                 </div>
 
@@ -176,8 +196,8 @@
                                 class="moreText" id="two">conveniently through our digital channels on CertTransX. All
                                 verification responses provided by the institution responsible. </span>
                         </p>
-                        <button class="learn-more-btn cursor-pointer" onClick = "showMore('organization')">Learn More &nbsp; <img
-                                src="images/right-arrow-blue.svg" alt=""></button>
+                        <button class="learn-more-btn cursor-pointer" onClick="showMore('organization')">Learn More
+                            &nbsp; <img src="images/right-arrow-blue.svg" alt=""></button>
                     </div>
                 </div>
 
@@ -190,10 +210,12 @@
                         <p class="card-header">Tertiary Institutions</p>
                         <p class="card-text">
                             Its enables seamless upload and transfer of certificate/transcript to ...
-                            <span class="moreText" id="three"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis natus nesciunt, veniam repellat ullam corporis quia ex doloremque vero aliquid.</span>
+                            <span class="moreText" id="three"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Officiis natus nesciunt, veniam repellat ullam corporis quia ex doloremque vero
+                                aliquid.</span>
                         </p>
-                        <button class="learn-more-btn cursor-pointer" onClick = "showMore('tertiary')">Learn More &nbsp; <img
-                                src="images/right-arrow-blue.svg" alt=""></button>
+                        <button class="learn-more-btn cursor-pointer" onClick="showMore('tertiary')">Learn More &nbsp;
+                            <img src="images/right-arrow-blue.svg" alt=""></button>
                     </div>
                 </div>
 
@@ -239,7 +261,7 @@
             </p>
 
             <div class="app-store-img">
-                <a>
+                <a class="cursor-pointer">
                     <img src="images/app-store-png-logo.svg" alt="">
                 </a>
             </div>
@@ -292,16 +314,16 @@
                     <img src="images/fb-icon.svg" alt="">
                 </a>
                 <a href="" class="ig">
-                    <img src="images/instagram.svg" alt="" >
+                    <img src="images/instagram.svg" alt="">
                 </a>
                 <a href="">
                     <img src="images/twitter.svg" alt="">
                 </a>
-                
+
                 <a href="">
                     <img src="images/youtube.svg" alt="">
                 </a>
-                
+
 
             </div>
         </div>

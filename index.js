@@ -1,11 +1,4 @@
-// const learnMoreBtn = document.getElementsByClassName('learn-more-btn');
-// const cardText = document.querySelector('.card-text');
-// const moreText  = document.getElementsByClassName('moreText');
-// console.log('The hidden Text', moreText[0])
-
-
-
- function showMore(item){
+function showMore(item){
     let textOne = document.getElementById('one');
     let textTwo = document.getElementById('two');
     let textThree = document.getElementById('three');
@@ -26,4 +19,11 @@
         cardThree.classList.toggle('h-auto')
     }
   
+}
+
+
+function toggleMenu(){
+    let navMobileLinks= document.getElementById('mobileDiv')
+    navMobileLinks.classList.toggle('show-mobile-links')
+
 }
