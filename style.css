@@ -11,10 +11,9 @@ body {
 }
 
 nav {
-    position: fixed;
+    position: sticky;
     top: 0px;
-    left: 0px;
-    right: 0px;
+    z-index: 1000px;
     display: flex;
     padding: 10px 50px;
     justify-content: space-between;
@@ -24,6 +23,9 @@ nav {
 
 .links {
     column-gap: 30px;
+}
+.links img{
+    margin-bottom: 8px;
 }
 
 .nav-links {
@@ -50,6 +52,11 @@ nav {
     justify-content: center;
     align-items: center;
 }
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .flex-between{
     display: flex;
     justify-content: space-between;
@@ -59,7 +66,7 @@ nav {
     display: flex;
     justify-content: center;
     column-gap: 1.9rem;
-    align-items: center;
+    /* align-items: center; */
 }
 .more-section .flex{
     display: flex;
@@ -287,7 +294,7 @@ nav {
     margin-top: 70px;
     width: 90%;
     padding-bottom: 80px;
-    padding-top: 20px;
+    padding-top: 80px;
 }
 .service-heading{
     font-family: 'Jost',sans-serif;
@@ -311,7 +318,11 @@ nav {
     width: 350px;
     height: 540px;
     box-sizing: border-box;
-    overflow: hidden;
+    transition: all 1.5s ease-in-out;
+    /* overflow: hidden; */
+}
+.h-auto{
+    height: auto !important;
 }
 .card-info{
     padding: 2rem;
@@ -331,9 +342,25 @@ nav {
 .moreText{
     display: none;
 }
-.card-text.show-more .moreText{
+/* .card-text.show-more .moreText{
     display: inline;
+} */
+
+.ig{
+    background-color: #fff;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    /* padding-top: 10px; */
+    border:1px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.04);
 }
+.card .show-more{
+    display: inline;
+    height: auto !important;
+}
+
 .bg-white{
     background-color: #fff;
 }
@@ -350,14 +377,13 @@ nav {
 }
 .newsletter{
     position: absolute;
-    top: 280px;
+    top: 300px;
     background: #0E63F4;
     border-radius: 15px;
     color: #fff;
-    padding: 140px 12rem;
-    /* z-index: 1000; */
+    padding: 100px 12rem;
     width: 80%;
-    margin: 0 auto 20px;
+    margin: 0 auto 80px;
 }
 .newsletter-head{
     font-family: 'Jost', sans-serif;
@@ -403,6 +429,7 @@ form{
     width: 456px;
     height: 52.5px;
     margin: 30px auto 0px;
+    background: #0E63F4;
 
 }
 form input{
@@ -410,4 +437,374 @@ form input{
     outline: none;
     border-style: none;
     align-content: flex-start;
+    width: 70%;
+    padding-left: 16px;
+}
+.app-store-img{
+    margin-top: 20px;
+}
+.footer{
+    margin:230px auto 0px;
+    width: 80%;
+    column-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.socials{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content:center;
+    align-items: center;
+}
+.card-text.show-more .moreText{
+    display: inline;
+}
+.socials img{
+    filter: drop-shadow(0px 5px 14px rgba(0, 0, 0, 0.07));
+}
+.footer div{
+    padding: 0px 20px;
+}
+.no-underline{
+    text-decoration: none;
+}
+.address{
+    padding: 0px 10px;
+}
+.footer-logo{
+    margin-bottom: 10px;
+}
+.footer-heading{
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 32px;
+    color: #202224;
+}
+.footer-text{
+    font-size: 14px;
+    line-height: 24px;
+    color: #202224;
+}
+.small{
+    font-size: 14px;
+    line-height: 15px;
+    color: #202224;    
+}
+.copyright{
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    color: #FFFFFF;
+    background-color:#0E63F4;
+    padding: 25px 0px;
+    text-align: center;
+}
+.description-notes{
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center; 
+    color: #253858;    
+}
+.get-app{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: center;
+    color: #253858;
+}
+.get-app-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #253858;    
+}
+@media screen and (min-width:200px) and (max-width:420px) {
+    .card-info{
+        padding: 0px 1.2rem;
+    }
+    .top{
+        height: auto;
+    }
+    .card{
+        height: 400px;
+    }
+    .right{
+        display: none;
+    }
+    .hero-content div {
+        width: 100%;
+    }
+    .steps, .step-counter{
+        display: none;
+    }
+    .vector{
+        display: none;
+    }
+    .hero-section{
+        height: 600px;
+    }
+    .step-text{
+        display: block;
+    }
+    .step-text div {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .card-flex{
+        width: 100%;
+    }
+    .service-heading{
+        line-height: 30px !important;
+    }
+    .footer{
+        margin: 160px auto 15px !important;
+    }
+    .app-store-img img{
+        width: 50%;
+    }
+    form{
+        width: 220px;
+    }
+    .newsletter{
+        padding: 30px 0.25rem;
+    }
+    form input {
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width:540px){
+    nav{
+        padding: 10px 30px;
+    }
+    .hero-content div {
+        width: 100%;
+    }
+    .hero-content {
+        padding-top: 40px;
+    }
+    .vector{
+        display: none;
+    }
+    .hero-section{
+        height: 600px;
+    }
+    .step-text{
+        display: block;
+    }
+    .step-text div {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .steps, .step-counter{
+        display: none;
+    }
+    .overview-heading{
+        font-size: 25px;
+    }
+    .right{
+        display: none;
+    }
+    form{
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 6px;
+    }
+    form input{
+        padding-left: 0px;
+        width: 140px;
+    }
+    .footer {
+        margin: 200px auto 15px;
+    }
+    .newsletter{
+        padding: 30px 1rem;
+    }
+    .app-store-img img{
+        width: 60%;
+    }
+    
+}
+@media screen and (max-width:768px){
+    .footer{
+        display: block;
+        margin: 120px auto 15px;
+    }
+   .links, .nav-item{
+        display: none;
+    }
+    nav{
+        padding: 10px 30px;
+    }
+    .hero-content {
+        width: 85%;
+        padding-top: 50px;
+    }
+    .overview-section{
+        position: static;
+    }
+    .vector-one, .vector-two{
+        display: none;
+    }
+    .vector{
+        right: 0px;
+    }
+    .description {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .line-img{
+        display: none;
+    }
+    .card-flex{
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+    }
+    .card{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .card .top img{
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+    }
+    .socials{
+        grid-template-columns: repeat(4, 50px);
+        justify-content: flex-start;
+    }
+    .get-app{
+        font-size: 28px;
+    }
+    .get-app-text{
+        font-size: 13px;
+    }
+    .newsletter{
+        top: 200px;
+    }
+    .description{
+        padding-bottom: 40px;
+    }
+    .newsletter-head{
+        font-size: 28px;
+    }
+    .more-section{
+        padding: 0px 1rem 60px;
+    }
+    .more-section .flex{
+        display: block;
+    }
+    .more-heading{
+        font-size: 18px;
+    }
+    .more-subhead {
+        font-size: 13px;
+        line-height: 24px;
+    }
+    .service-heading{
+        padding-bottom: 20px;
+        padding-top: 5px;
+    }
+    .learn-more-btn{
+        padding: 20px 0px;
+    }
+    .address{
+        padding: 0px;
+    }
+    .service-inner{
+        padding-top: 40px;
+    }
+    .last-section{
+        padding-top: 50px;
+    }
+   
+}
+@media screen and (max-width:1024px) {
+    .hero-heading{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .hero-content{
+        padding-top: 40px;
+    }
+    .vector{
+        bottom: -56px;
+    }
+    .steps, .step-counter {
+        padding: 6px 4rem;
+    }
+    .description {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .overview-section {
+        padding: 1rem 3rem;
+    }
+    .step-header{
+        font-size: 20px;
+    }
+    .description-notes{
+        font-size: 13px;
+    }
+    .count{
+        font-size: 13px;
+    }
+    .service-heading{
+        font-size: 30px;
+    }
+    .card-header{
+        font-size: 20px;
+    }
+    .card-text{
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .learn-more-btn{
+        font-size: 15px;
+    }
+    .more-section{
+        padding: 0px 3rem 60px;
+        margin-top: 40px;
+    }
+    .more-heading{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .more-subhead{
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .newsletter{
+        padding: 30px 1rem;
+    }
+    .newsletter-head{
+        font-size: 25px;
+    }
+    .newsletter-subhead, form input, .footer-heading {
+        font-size: 14px;
+    }
+    nav{
+        position: static;
+    }
+    .footer{
+        margin: 100px auto 15px;
+        column-gap: .5rem;
+    }
+    .footer div {
+        padding: 0px 10px;
+    }
+    .footer-text{
+        font-size: 12px;
+    }
+    .copyright{
+        font-size: 13px;
+        padding: 15px 0px;
+    }
 }
