@@ -35,7 +35,6 @@ nav {
     column-gap: 20px;
 
 }
-
 .nav-links li::after {
     content: '';
     width: 0%;
@@ -44,10 +43,12 @@ nav {
     display: block;
     margin: auto;
     transition: 0.5s;
+    margin-top: 15%;
 }
 
 .nav-links li:hover::after {
-    width: 100%;
+   
+    width: 115%;
 }
 
 /* .nav-item.active:hover{
@@ -737,7 +738,7 @@ form input {
         display: flex;
         flex-direction: column;
         background-color: #fff;
-        box-shadow: 5px 5px 5px #788096;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         padding: 10px 15px;
         right: 15%;
         border-radius: 4px;
